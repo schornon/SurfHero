@@ -7,49 +7,38 @@
 
 import SwiftUI
 import AppKit
+import Combine
 
 final class MenuBarViewModel: ObservableObject {
     
-    let settings: SettingsStore = .shared
-    @Published var httpHandlers: [Bundle] = []
-    @Published var defaultHttpHandler: Bundle = MenuBarViewModel.defaultHttpHandlerBundle()
+    @Published var settings: SettingsStore = .shared
+    var filteredHttpHandlers: [Bundle] {
+        let exceptions = settings.httpHandlerExceptions
+        return settings.httpHandlers.filter({!exceptions.contains($0.bundleIdentifier ?? "")})
+    }
+    @Published var currentHttpHandler: Bundle = SettingsStore.currentHttpHandlerBundle()
+    var cancellables: Set<AnyCancellable> = .init()
     
     init() {
-        synchronize()
+        setupObservers()
     }
     
-    private func synchronize() {
-        let httpHanlerExceptions = settings.httpHandlerExceptions
-        self.httpHandlers = httpHandlerBundles().filter({!httpHanlerExceptions.contains($0.bundleIdentifier ?? "")})
-        self.defaultHttpHandler = Self.defaultHttpHandlerBundle()
-    }
-    
-    private func httpHandlerBundles() -> [Bundle] {
-        let appUrls = NSWorkspace.shared.urlsForApplications(toOpen: URL(string: "http://")!)
-        let bundles = appUrls.compactMap({ Bundle(url: $0) })
-        return bundles
-    }
-    
-    static func defaultHttpHandlerBundle() -> Bundle! {
-        let url = NSWorkspace.shared.urlForApplication(toOpen: URL(string: "http://")!)!
-        return Bundle(url: url)!
+    private func setupObservers() {
+        settings.objectWillChange
+            .sink { [weak self] in
+                self?.objectWillChange.send()
+            }
+            .store(in: &cancellables)
+        
+        settings.$currentHttpHandler
+            .assign(to: &$currentHttpHandler)
     }
     
     func setDefaultHttpHandler(_ bundle: Bundle) {
-        NSWorkspace.shared.setDefaultApplication(at: bundle.bundleURL, toOpenURLsWithScheme: "http") { [weak self] error in
-            DispatchQueue.main.async {
-                self?.defaultHttpHandler = Self.defaultHttpHandlerBundle()
-            }
-        }
+        settings.setDefaultHttpHandler(bundle)
     }
     
     func onQuitTap() {
         NSApplication.shared.terminate(nil)
-    }
-}
-
-extension Bundle {
-    var displayName: String? {
-        infoDictionary?["CFBundleName"] as? String
     }
 }

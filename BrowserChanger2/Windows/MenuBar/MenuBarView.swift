@@ -14,9 +14,10 @@ struct MenuBarView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            ForEach(0..<vm.httpHandlers.count, id: \.self) { i in
-                let handler = vm.httpHandlers[i]
-                let isEnabled = vm.defaultHttpHandler.bundleIdentifier != handler.bundleIdentifier
+            let filtered = vm.filteredHttpHandlers
+            ForEach(0..<filtered.count, id: \.self) { i in
+                let handler = filtered[i]
+                let isEnabled = vm.currentHttpHandler.bundleIdentifier != handler.bundleIdentifier
                 if let displayName = handler.displayName {
                     Button(displayName) {
                         vm.setDefaultHttpHandler(handler)
@@ -29,7 +30,6 @@ struct MenuBarView: View {
             Button("Settings") {
                 onSettingsTap()
             }
-            .disabled(true)
             
             Button("Quit") {
                 vm.onQuitTap()

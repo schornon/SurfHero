@@ -19,6 +19,7 @@ struct BrowserChanger2App: App {
             SettingsView()
                 .environmentObject(settingsStore)
         }
+        .windowResizability(.contentSize)
         
         MenuBarExtra.init("1", systemImage: "globe.europe.africa") {
             MenuBarView()
