@@ -26,7 +26,11 @@ final class SettingsStore: ObservableObject {
     private func httpHandlerBundles() -> [Bundle] {
         let appUrls = NSWorkspace.shared.urlsForApplications(toOpen: URL(string: "http://")!)
         let bundles = appUrls.compactMap({ Bundle(url: $0) })
-        return bundles
+        let sorted = bundles.sorted {
+            guard let first = $0.displayName, let second = $1.displayName else { return false }
+            return first < second
+        }
+        return sorted
     }
     
     static func currentHttpHandlerBundle() -> Bundle! {
