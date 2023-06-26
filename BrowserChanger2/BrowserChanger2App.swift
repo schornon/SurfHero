@@ -21,10 +21,12 @@ struct BrowserChanger2App: App {
         }
         .windowResizability(.contentSize)
         
-        MenuBarExtra.init("1", systemImage: "globe.europe.africa") {
+        MenuBarExtra {
             MenuBarView()
+        } label: {
+            Image(systemName: "macwindow")
         }
-        .menuBarExtraStyle(.menu)
+
     }
 }
 

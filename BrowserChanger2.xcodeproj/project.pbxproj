@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8C642B8229CA5D6D003999BB /* BrowserChanger2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrowserChanger2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C642B8229CA5D6D003999BB /* BChan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BChan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C642B8529CA5D6D003999BB /* BrowserChanger2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserChanger2App.swift; sourceTree = "<group>"; };
 		8C642B8729CA5D6D003999BB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8C642B8929CA5D6F003999BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		8C642B8329CA5D6D003999BB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8C642B8229CA5D6D003999BB /* BrowserChanger2.app */,
+				8C642B8229CA5D6D003999BB /* BChan.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,9 +108,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8C642B8129CA5D6D003999BB /* BrowserChanger2 */ = {
+		8C642B8129CA5D6D003999BB /* BChan */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8C642B9129CA5D6F003999BB /* Build configuration list for PBXNativeTarget "BrowserChanger2" */;
+			buildConfigurationList = 8C642B9129CA5D6F003999BB /* Build configuration list for PBXNativeTarget "BChan" */;
 			buildPhases = (
 				8C642B7E29CA5D6D003999BB /* Sources */,
 				8C642B7F29CA5D6D003999BB /* Frameworks */,
@@ -120,9 +120,9 @@
 			);
 			dependencies = (
 			);
-			name = BrowserChanger2;
+			name = BChan;
 			productName = BrowserChanger2;
-			productReference = 8C642B8229CA5D6D003999BB /* BrowserChanger2.app */;
+			productReference = 8C642B8229CA5D6D003999BB /* BChan.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -153,7 +153,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8C642B8129CA5D6D003999BB /* BrowserChanger2 */,
+				8C642B8129CA5D6D003999BB /* BChan */,
 			);
 		};
 /* End PBXProject section */
@@ -239,7 +239,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -295,7 +295,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -372,7 +372,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8C642B9129CA5D6F003999BB /* Build configuration list for PBXNativeTarget "BrowserChanger2" */ = {
+		8C642B9129CA5D6F003999BB /* Build configuration list for PBXNativeTarget "BChan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8C642B9229CA5D6F003999BB /* Debug */,
