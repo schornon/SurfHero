@@ -17,7 +17,7 @@
                BlueprintIdentifier = "8C642B8129CA5D6D003999BB"
                BuildableName = "BChan.app"
                BlueprintName = "BChan"
-               ReferencedContainer = "container:BrowserChanger2.xcodeproj">
+               ReferencedContainer = "container:BChan.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,7 +46,7 @@
             BlueprintIdentifier = "8C642B8129CA5D6D003999BB"
             BuildableName = "BChan.app"
             BlueprintName = "BChan"
-            ReferencedContainer = "container:BrowserChanger2.xcodeproj">
+            ReferencedContainer = "container:BChan.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,7 +63,7 @@
             BlueprintIdentifier = "8C642B8129CA5D6D003999BB"
             BuildableName = "BChan.app"
             BlueprintName = "BChan"
-            ReferencedContainer = "container:BrowserChanger2.xcodeproj">
+            ReferencedContainer = "container:BChan.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

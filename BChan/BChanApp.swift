@@ -1,5 +1,5 @@
 //
-//  BrowserChanger2App.swift
+//  BChanApp.swift
 //  BrowserChanger2
 //
 //  Created by mbp2 hilfy on 21.03.2023.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct BrowserChanger2App: App {
+struct BChanApp: App {
     
     @NSApplicationDelegateAdaptor(Appdelegate.self) var appDelegate
     @StateObject var settingsStore: SettingsStore = .shared
