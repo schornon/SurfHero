@@ -15,6 +15,7 @@
 		8C74FA3A29FFD7A90056AA97 /* MenuBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C74FA3929FFD7A90056AA97 /* MenuBarViewModel.swift */; };
 		8C74FA3D29FFF8670056AA97 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C74FA3C29FFF8670056AA97 /* SettingsStore.swift */; };
 		8C74FA3F29FFFF500056AA97 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C74FA3E29FFFF500056AA97 /* SettingsView.swift */; };
+		C5C2ED6B2BBF098700B93F0C /* SettingsVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C2ED6A2BBF098700B93F0C /* SettingsVersionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8C74FA3929FFD7A90056AA97 /* MenuBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarViewModel.swift; sourceTree = "<group>"; };
 		8C74FA3C29FFF8670056AA97 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		8C74FA3E29FFFF500056AA97 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C5C2ED6A2BBF098700B93F0C /* SettingsVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVersionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				8C74FA3C29FFF8670056AA97 /* SettingsStore.swift */,
 				8C74FA3E29FFFF500056AA97 /* SettingsView.swift */,
+				C5C2ED6A2BBF098700B93F0C /* SettingsVersionView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				8C74FA3729FFD74A0056AA97 /* MenuBarView.swift in Sources */,
 				8C74FA3F29FFFF500056AA97 /* SettingsView.swift in Sources */,
 				8C74FA3D29FFF8670056AA97 /* SettingsStore.swift in Sources */,
+				C5C2ED6B2BBF098700B93F0C /* SettingsVersionView.swift in Sources */,
 				8C74FA3A29FFD7A90056AA97 /* MenuBarViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

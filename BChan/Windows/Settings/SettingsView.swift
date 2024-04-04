@@ -41,6 +41,9 @@ struct SettingsView: View {
                 .environmentObject(store)
         }
         .padding()
+        .overlay(alignment: .topTrailing) {
+            SettingsVersionView(text: store.appVersion)
+        }
     }
     
     struct ExceptionDescriptionView: View {

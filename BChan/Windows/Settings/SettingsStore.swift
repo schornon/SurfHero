@@ -14,6 +14,11 @@ final class SettingsStore: ObservableObject {
     @Published var httpHandlers: [Bundle] = []
     @AppStorage("httpHandlerExceptions") var httpHandlerExceptions: [String] = ["com.googlecode.iterm2"]
     @Published var currentHttpHandler: Bundle = SettingsStore.currentHttpHandlerBundle()
+    
+    var appVersion: String {
+        "v.\(Bundle.main.marketingVersion ?? "") (\(Bundle.main.buildVersion ?? ""))"
+    }
+    
     private init() {
         synchronize()
     }
@@ -84,5 +89,14 @@ extension Array: RawRepresentable where Element: Codable {
 extension Bundle {
     var displayName: String? {
         infoDictionary?["CFBundleName"] as? String
+    }
+}
+
+extension Bundle {
+    var marketingVersion: String? {
+        return infoDictionary?["CFBundleShortVersionString"] as? String
+    }
+    var buildVersion: String? {
+        return infoDictionary?["CFBundleVersion"] as? String
     }
 }
