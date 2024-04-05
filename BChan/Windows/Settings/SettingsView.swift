@@ -28,7 +28,7 @@ struct SettingsView: View {
                     .font(.system(size: 16, weight: .bold, design: .rounded))
                 
                 HStack(spacing: 16) {
-                    ExceptionDescriptionView(iconName: "nosign", iconColor: .red, descr: " - excepted")
+                    ExceptionDescriptionView(iconName: "nosign", iconColor: .red, descr: " - excluded")
                     
                     ExceptionDescriptionView(iconName: "checkmark", iconColor: .green, descr: " - included")
                 }
