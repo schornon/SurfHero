@@ -90,6 +90,7 @@ struct SettingsView: View {
                     HStack(spacing: 4) {
                         Image(systemName: excepted ? "nosign" : "checkmark")
                             .foregroundColor(excepted ? .red : .green)
+                            .frame(width: 16)
                         
                         Text(title)
                             .fontDesign(.rounded)
