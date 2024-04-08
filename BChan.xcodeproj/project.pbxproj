@@ -15,6 +15,8 @@
 		8C74FA3A29FFD7A90056AA97 /* MenuBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C74FA3929FFD7A90056AA97 /* MenuBarViewModel.swift */; };
 		8C74FA3D29FFF8670056AA97 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C74FA3C29FFF8670056AA97 /* SettingsStore.swift */; };
 		8C74FA3F29FFFF500056AA97 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C74FA3E29FFFF500056AA97 /* SettingsView.swift */; };
+		C5B8678B2BC0467700B29CD7 /* NSWorkspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B8678A2BC0467700B29CD7 /* NSWorkspace.swift */; };
+		C5B867912BC44E1700B29CD7 /* LiftButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B867902BC44E1700B29CD7 /* LiftButtonStyle.swift */; };
 		C5C2ED6B2BBF098700B93F0C /* SettingsVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C2ED6A2BBF098700B93F0C /* SettingsVersionView.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		8C74FA3929FFD7A90056AA97 /* MenuBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarViewModel.swift; sourceTree = "<group>"; };
 		8C74FA3C29FFF8670056AA97 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		8C74FA3E29FFFF500056AA97 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C5B8678A2BC0467700B29CD7 /* NSWorkspace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSWorkspace.swift; sourceTree = "<group>"; };
+		C5B867902BC44E1700B29CD7 /* LiftButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftButtonStyle.swift; sourceTree = "<group>"; };
 		C5C2ED6A2BBF098700B93F0C /* SettingsVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVersionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +69,7 @@
 				8C74FA3529FFD7250056AA97 /* Windows */,
 				8C642B8529CA5D6D003999BB /* BChanApp.swift */,
 				8C642B8729CA5D6D003999BB /* ContentView.swift */,
+				C5B867882BC0465B00B29CD7 /* Reuse */,
 				8C642B8929CA5D6F003999BB /* Assets.xcassets */,
 				8C642B8E29CA5D6F003999BB /* BChan.entitlements */,
 				8C642B8B29CA5D6F003999BB /* Preview Content */,
@@ -106,6 +111,39 @@
 				C5C2ED6A2BBF098700B93F0C /* SettingsVersionView.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		C5B867882BC0465B00B29CD7 /* Reuse */ = {
+			isa = PBXGroup;
+			children = (
+				C5B8678E2BC44DFD00B29CD7 /* UI */,
+				C5B867892BC0466100B29CD7 /* Extensions */,
+			);
+			path = Reuse;
+			sourceTree = "<group>";
+		};
+		C5B867892BC0466100B29CD7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C5B8678A2BC0467700B29CD7 /* NSWorkspace.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C5B8678E2BC44DFD00B29CD7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C5B8678F2BC44E0200B29CD7 /* Styles */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C5B8678F2BC44E0200B29CD7 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				C5B867902BC44E1700B29CD7 /* LiftButtonStyle.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,10 +216,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5B867912BC44E1700B29CD7 /* LiftButtonStyle.swift in Sources */,
 				8C642B8829CA5D6D003999BB /* ContentView.swift in Sources */,
 				8C642B8629CA5D6D003999BB /* BChanApp.swift in Sources */,
 				8C74FA3729FFD74A0056AA97 /* MenuBarView.swift in Sources */,
 				8C74FA3F29FFFF500056AA97 /* SettingsView.swift in Sources */,
+				C5B8678B2BC0467700B29CD7 /* NSWorkspace.swift in Sources */,
 				8C74FA3D29FFF8670056AA97 /* SettingsStore.swift in Sources */,
 				C5C2ED6B2BBF098700B93F0C /* SettingsVersionView.swift in Sources */,
 				8C74FA3A29FFD7A90056AA97 /* MenuBarViewModel.swift in Sources */,
@@ -243,7 +283,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.2.3;
+				MARKETING_VERSION = 1.2.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -299,7 +339,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.2.3;
+				MARKETING_VERSION = 1.2.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;

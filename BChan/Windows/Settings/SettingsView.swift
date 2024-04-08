@@ -28,11 +28,10 @@ struct SettingsView: View {
                     .font(.system(size: 16, weight: .bold, design: .rounded))
                 
                 HStack(spacing: 16) {
-                    ExceptionDescriptionView(iconName: "nosign", iconColor: .red, descr: " - excluded")
-                    
-                    ExceptionDescriptionView(iconName: "checkmark", iconColor: .green, descr: " - included")
+                    ExceptionDescriptionView(included: false)
+                        
+                    ExceptionDescriptionView(included: true)
                 }
-                .opacity(0.5)
                 .padding(.horizontal)
             }
             .padding(.horizontal, 8)
@@ -47,16 +46,22 @@ struct SettingsView: View {
     }
     
     struct ExceptionDescriptionView: View {
-        let iconName: String
-        let iconColor: Color
-        let descr: String
+        let included: Bool
+        let nsImage = NSWorkspace.shared.getIcon(application: "Safari") ?? NSImage()
+        var descr: String {
+            included ? "included" : "excluded"
+        }
+        
         var body: some View {
             HStack(spacing: 0) {
-                Image(systemName: iconName)
-                    .foregroundColor(iconColor)
+                Image(nsImage: nsImage)
+                    .resizable()
+                    .frame(width: 16, height: 16)
+                    .opacity(included ? 1 : 0.5)
                 
-                Text(descr)
+                Text(" - \(descr)")
                     .font(.system(size: 12, weight: .regular, design: .rounded))
+                    .foregroundStyle(.gray)
             }
         }
     }
@@ -69,11 +74,12 @@ struct SettingsView: View {
                 ForEach(0..<store.httpHandlers.count, id: \.self) { i in
                     let handler = store.httpHandlers[i]
                     let excepted = store.isException(handler)
-                    Row(title: handler.displayName ?? "", excepted: excepted) {
+                    Row(handler: handler, excepted: excepted) {
                         store.toggleHandler(handler)
                     }
                 }
             }
+            .frame(width: 200, alignment: .leading)
             .padding(.horizontal, 16)
             .padding(.vertical, 8)
             .background(.white)
@@ -81,24 +87,25 @@ struct SettingsView: View {
         }
         
         struct Row: View {
-            let title: String
+            let handler: Bundle
             var excepted: Bool
             let action: () -> Void
             
             var body: some View {
                 Button(action: action) {
                     HStack(spacing: 4) {
-                        Image(systemName: excepted ? "nosign" : "checkmark")
+                        Image(nsImage: handler.icon ?? NSImage())
+                            .resizable()
                             .foregroundColor(excepted ? .red : .green)
-                            .frame(width: 16)
+                            .frame(width: 16, height: 16)
                         
-                        Text(title)
+                        Text(handler.displayName ?? "")
                             .fontDesign(.rounded)
                     }
-                    .frame(width: 200, alignment: .leading)
+                    .frame(minWidth: 100, alignment: .leading)
                     .opacity(excepted ? 0.5 : 1)
                 }
-                .buttonStyle(.borderless)
+                .buttonStyle(.lift)
                 .tint(.black)
             }
         }

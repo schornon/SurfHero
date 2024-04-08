@@ -90,6 +90,12 @@ extension Bundle {
     var displayName: String? {
         infoDictionary?["CFBundleName"] as? String
     }
+    
+    var icon: NSImage? {
+        guard let bundleIdentifier else { return nil }
+        return NSWorkspace.shared.getIcon(bundleID: bundleIdentifier)
+    }
+    
 }
 
 extension Bundle {
