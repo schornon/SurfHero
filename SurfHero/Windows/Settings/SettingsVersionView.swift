@@ -1,6 +1,6 @@
 //
 //  SettingsVersionView.swift
-//  BChan
+//  SurfHero
 //
 //  Created by Serhii Chornonoh on 04.04.2024.
 //
