@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C642B8629CA5D6D003999BB /* BChanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C642B8529CA5D6D003999BB /* BChanApp.swift */; };
+		8C642B8629CA5D6D003999BB /* SurfHeroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C642B8529CA5D6D003999BB /* SurfHeroApp.swift */; };
 		8C642B8A29CA5D6F003999BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C642B8929CA5D6F003999BB /* Assets.xcassets */; };
 		8C642B8D29CA5D6F003999BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C642B8C29CA5D6F003999BB /* Preview Assets.xcassets */; };
 		8C74FA3729FFD74A0056AA97 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C74FA3629FFD74A0056AA97 /* MenuBarView.swift */; };
@@ -20,11 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8C642B8229CA5D6D003999BB /* BChan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BChan.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C642B8529CA5D6D003999BB /* BChanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BChanApp.swift; sourceTree = "<group>"; };
+		8C642B8229CA5D6D003999BB /* Surf Hero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Surf Hero.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C642B8529CA5D6D003999BB /* SurfHeroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfHeroApp.swift; sourceTree = "<group>"; };
 		8C642B8929CA5D6F003999BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C642B8C29CA5D6F003999BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8C642B8E29CA5D6F003999BB /* BChan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BChan.entitlements; sourceTree = "<group>"; };
+		8C642B8E29CA5D6F003999BB /* SurfHero.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SurfHero.entitlements; sourceTree = "<group>"; };
 		8C74FA3629FFD74A0056AA97 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 		8C74FA3929FFD7A90056AA97 /* MenuBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarViewModel.swift; sourceTree = "<group>"; };
 		8C74FA3C29FFF8670056AA97 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		8C642B7929CA5D6D003999BB = {
 			isa = PBXGroup;
 			children = (
-				8C642B8429CA5D6D003999BB /* BChan */,
+				8C642B8429CA5D6D003999BB /* SurfHero */,
 				8C642B8329CA5D6D003999BB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,22 +56,22 @@
 		8C642B8329CA5D6D003999BB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8C642B8229CA5D6D003999BB /* BChan.app */,
+				8C642B8229CA5D6D003999BB /* Surf Hero.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8C642B8429CA5D6D003999BB /* BChan */ = {
+		8C642B8429CA5D6D003999BB /* SurfHero */ = {
 			isa = PBXGroup;
 			children = (
 				8C74FA3529FFD7250056AA97 /* Windows */,
-				8C642B8529CA5D6D003999BB /* BChanApp.swift */,
+				8C642B8529CA5D6D003999BB /* SurfHeroApp.swift */,
 				C5B867882BC0465B00B29CD7 /* Reuse */,
 				8C642B8929CA5D6F003999BB /* Assets.xcassets */,
-				8C642B8E29CA5D6F003999BB /* BChan.entitlements */,
+				8C642B8E29CA5D6F003999BB /* SurfHero.entitlements */,
 				8C642B8B29CA5D6F003999BB /* Preview Content */,
 			);
-			path = BChan;
+			path = SurfHero;
 			sourceTree = "<group>";
 		};
 		8C642B8B29CA5D6F003999BB /* Preview Content */ = {
@@ -146,9 +146,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8C642B8129CA5D6D003999BB /* BChan */ = {
+		8C642B8129CA5D6D003999BB /* SurfHero */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8C642B9129CA5D6F003999BB /* Build configuration list for PBXNativeTarget "BChan" */;
+			buildConfigurationList = 8C642B9129CA5D6F003999BB /* Build configuration list for PBXNativeTarget "SurfHero" */;
 			buildPhases = (
 				8C642B7E29CA5D6D003999BB /* Sources */,
 				8C642B7F29CA5D6D003999BB /* Frameworks */,
@@ -158,9 +158,9 @@
 			);
 			dependencies = (
 			);
-			name = BChan;
+			name = SurfHero;
 			productName = BrowserChanger2;
-			productReference = 8C642B8229CA5D6D003999BB /* BChan.app */;
+			productReference = 8C642B8229CA5D6D003999BB /* Surf Hero.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -178,7 +178,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8C642B7D29CA5D6D003999BB /* Build configuration list for PBXProject "BChan" */;
+			buildConfigurationList = 8C642B7D29CA5D6D003999BB /* Build configuration list for PBXProject "SurfHero" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -191,7 +191,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8C642B8129CA5D6D003999BB /* BChan */,
+				8C642B8129CA5D6D003999BB /* SurfHero */,
 			);
 		};
 /* End PBXProject section */
@@ -214,7 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5B867912BC44E1700B29CD7 /* LiftButtonStyle.swift in Sources */,
-				8C642B8629CA5D6D003999BB /* BChanApp.swift in Sources */,
+				8C642B8629CA5D6D003999BB /* SurfHeroApp.swift in Sources */,
 				8C74FA3729FFD74A0056AA97 /* MenuBarView.swift in Sources */,
 				8C74FA3F29FFFF500056AA97 /* SettingsView.swift in Sources */,
 				C5B8678B2BC0467700B29CD7 /* NSWorkspace.swift in Sources */,
@@ -349,11 +349,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = BChan/BChan.entitlements;
+				CODE_SIGN_ENTITLEMENTS = SurfHero/SurfHero.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DEVELOPMENT_ASSET_PATHS = "\"BChan/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SurfHero/Preview Content\"";
 				DEVELOPMENT_TEAM = 98PQL27BHK;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -365,8 +366,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = "$(MARKETING_VERSION)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cs.BChan;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cs.surfhero;
+				PRODUCT_NAME = "Surf Hero";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -377,11 +378,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = BChan/BChan.entitlements;
+				CODE_SIGN_ENTITLEMENTS = SurfHero/SurfHero.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DEVELOPMENT_ASSET_PATHS = "\"BChan/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SurfHero/Preview Content\"";
 				DEVELOPMENT_TEAM = 98PQL27BHK;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -393,8 +395,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = "$(MARKETING_VERSION)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cs.BChan;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cs.surfhero;
+				PRODUCT_NAME = "Surf Hero";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -403,7 +405,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8C642B7D29CA5D6D003999BB /* Build configuration list for PBXProject "BChan" */ = {
+		8C642B7D29CA5D6D003999BB /* Build configuration list for PBXProject "SurfHero" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8C642B8F29CA5D6F003999BB /* Debug */,
@@ -412,7 +414,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8C642B9129CA5D6F003999BB /* Build configuration list for PBXNativeTarget "BChan" */ = {
+		8C642B9129CA5D6F003999BB /* Build configuration list for PBXNativeTarget "SurfHero" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8C642B9229CA5D6F003999BB /* Debug */,
