@@ -1,6 +1,6 @@
-# ![](https://dropovercl.s3.amazonaws.com/ba6264eb-6919-4f62-a233-2790b48fa222/e5ac70ce-1ae7-4021-b23b-22cba9528876/f8e66dbc-13e7-4064-a583-c427ddc3e3d9.svg)
+# ![](https://dropovercl.s3.amazonaws.com/d5d7a576-987c-4404-9a02-1347da813609/d8c6d0b9-82c1-4122-b1ca-6c7495280f10/d06e0514-b9fe-46de-8941-373af6a684a6.svg)
 
-**BChan** can change your default browser in a few clicks. Also, BChan has Settings, where you can configure exceptions.
+**Surf Hero** can change your default browser in a few clicks. Also, `Surf Hero` has `Settings`, where you can configure exceptions.
 
 <details>
   <summary>Demo</summary>
@@ -9,10 +9,10 @@
 
 # Installation
 - Go to the [Release](https://github.com/schornon/BrowserChanger2/releases) page;
-- Download latest `BChan.zip` and unarchive it;
+- Download latest `Surf Hero.zip` and unarchive it;
 - [Control-click](https://support.apple.com/en-gb/guide/mac-help/mchleab3a043/mac) the app icon, then choose Open from the shortcut menu.
 - Enjoy! 
-- `optional_1:` move `BChan.app` to the `Application` folder;
-- `optional_2:` you can add `BChan.app` to the macos `Login Items`: `Settings -> General -> Login Items`.
+- `optional_1:` move `Surf Hero.app` to the `Application` folder;
+- `optional_2:` you can add `Surf Hero.app` to the macos `Login Items`: `Settings -> General -> Login Items`.
 ### Requirments
 - MacOS 13.1+
