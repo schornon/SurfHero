@@ -1,6 +1,6 @@
 //
 //  LiftButtonStyle.swift
-//  BChan
+//  SurfHero
 //
 //  Created by Serhii Chornonoh on 08.04.2024.
 //

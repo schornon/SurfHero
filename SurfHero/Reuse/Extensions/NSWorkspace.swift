@@ -1,6 +1,6 @@
 //
 //  NSWorkspace.swift
-//  BChan
+//  SurfHero
 //
 //  Created by Serhii Chornonoh on 05.04.2024.
 //
