@@ -92,21 +92,15 @@ struct SettingsView: View {
             let action: () -> Void
             
             var body: some View {
-                Button(action: action) {
-                    HStack(spacing: 4) {
-                        Image(nsImage: handler.icon ?? NSImage())
-                            .resizable()
-                            .foregroundColor(excepted ? .red : .green)
-                            .frame(width: 16, height: 16)
-                        
-                        Text(handler.displayName ?? "")
-                            .fontDesign(.rounded)
-                    }
-                    .frame(minWidth: 100, alignment: .leading)
-                    .opacity(excepted ? 0.5 : 1)
+                Button(handler.displayName ?? "") {
+                    action()
                 }
-                .buttonStyle(.lift)
-                .tint(.black)
+                .buttonStyle(
+                    .liftIcon(
+                        Image(nsImage: handler.icon ?? NSImage())
+                    )
+                )
+                .opacity(excepted ? 0.5 : 1)
             }
         }
     }
