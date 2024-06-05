@@ -24,7 +24,8 @@ struct SurfHeroApp: App {
         MenuBarExtra {
             MenuBarView()
         } label: {
-            Image(systemName: "macwindow")
+            StatusBarIcon()
+                .environmentObject(settingsStore)
         }
 
     }

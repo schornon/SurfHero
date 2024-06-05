@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="95px" height="91px" viewBox="0 0 95 91" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Regular-S</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Regular-S" transform="translate(2.000000, 2.000000)">
+            <text id="W" font-family="AmericanTypewriter-Semibold, American Typewriter" font-size="68" font-weight="500" fill="#FFFFFF">
+                <tspan x="4" y="72">W</tspan>
+            </text>
+            <path d="M0,66.999961 C0,76.3333317 4.15038,81 12.45118,81 L78.12498,81 C86.47458,81 90.57638,76.3333317 90.57638,66.999961 L90.57638,14.0000105 C90.57638,4.6667081 86.47458,0 78.12498,0 L12.45118,0 C4.15038,0 0,4.6667081 0,14.0000105 L0,66.999961 Z" id="Path" stroke="#FFFFFF" stroke-width="4" fill-rule="nonzero"></path>
+            <g id="dots" transform="translate(10.082080, 7.396500)" fill="#FFFFFF" fill-rule="nonzero">
+                <path d="M3.9730599,8 C1.77177887,8 0,6.06713033 0,3.97316986 C0,1.87920939 1.77177887,0 3.9730599,0 C6.17445089,0 7.99989004,1.87920939 7.99989004,3.97316986 C7.99989004,6.06713033 6.17445089,8 3.9730599,8 Z" id="Path"></path>
+                <path d="M18.8971053,8 C16.642054,8 14.8702752,6.06713033 14.8702752,3.97316986 C14.8702752,1.87920939 16.642054,0 18.8971053,0 C21.0984963,0 22.8702752,1.87920939 22.8702752,3.97316986 C22.8702752,6.06713033 21.0984963,8 18.8971053,8 Z" id="Path"></path>
+                <path d="M33.7673805,8 C31.5660995,8 29.7405503,6.06713033 29.7405503,3.97316986 C29.7405503,1.87920939 31.5660995,0 33.7673805,0 C35.9687715,0 37.7405503,1.87920939 37.7405503,3.97316986 C37.7405503,6.06713033 35.9687715,8 33.7673805,8 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

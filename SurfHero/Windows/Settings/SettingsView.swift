@@ -11,97 +11,50 @@ struct SettingsView: View {
     
     @EnvironmentObject var store: SettingsStore
     
+    @State var tab: SettingsTab = .exceptions
+    
     var body: some View {
         content
+            .environmentObject(store)
             .onAppear {
                 store.isOpened = true
             }
             .onDisappear {
                 store.isOpened = false
             }
+            .navigationTitle("Settings")
     }
     
     var content: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            VStack(alignment: .leading) {
-                Text("Exceptions")
-                    .font(.system(size: 16, weight: .bold, design: .rounded))
-                
-                HStack(spacing: 16) {
-                    ExceptionDescriptionView(included: false)
-                        
-                    ExceptionDescriptionView(included: true)
-                }
-                .padding(.horizontal)
-            }
-            .padding(.horizontal, 8)
+        VStack(spacing: 10) {
+            tabPicker
             
-            HandlersList()
-                .environmentObject(store)
+            tabContent
         }
         .padding()
-        .overlay(alignment: .topTrailing) {
+        .overlay(alignment: .bottomTrailing) {
             SettingsVersionView(text: store.appVersion)
         }
     }
     
-    struct ExceptionDescriptionView: View {
-        let included: Bool
-        let nsImage = NSWorkspace.shared.getIcon(application: "Safari") ?? NSImage()
-        var descr: String {
-            included ? "included" : "excluded"
-        }
-        
-        var body: some View {
-            HStack(spacing: 0) {
-                Image(nsImage: nsImage)
-                    .resizable()
-                    .frame(width: 16, height: 16)
-                    .opacity(included ? 1 : 0.5)
-                
-                Text(" - \(descr)")
-                    .font(.system(size: 12, weight: .regular, design: .rounded))
-                    .foregroundStyle(.gray)
+    var tabPicker: some View {
+        Picker("", selection: $tab) {
+            ForEach(SettingsTab.allCases) {
+                Text($0.displayValue)
+                    .tag($0)
             }
         }
+        .pickerStyle(SegmentedPickerStyle())
+        .frame(maxWidth: 300)
     }
     
-    struct HandlersList: View {
-        @EnvironmentObject var store: SettingsStore
-        
-        var body: some View {
-            VStack(alignment: .leading, spacing: 6) {
-                ForEach(0..<store.httpHandlers.count, id: \.self) { i in
-                    let handler = store.httpHandlers[i]
-                    let excepted = store.isException(handler)
-                    Row(handler: handler, excepted: excepted) {
-                        store.toggleHandler(handler)
-                    }
-                }
-            }
-            .frame(width: 200, alignment: .leading)
-            .padding(.horizontal, 16)
-            .padding(.vertical, 8)
-            .background(.white)
-            .cornerRadius(16)
-        }
-        
-        struct Row: View {
-            let handler: Bundle
-            var excepted: Bool
-            let action: () -> Void
-            
-            var body: some View {
-                Button(handler.displayName ?? "") {
-                    action()
-                }
-                .buttonStyle(
-                    .liftIcon(
-                        Image(nsImage: handler.icon ?? NSImage())
-                    )
-                )
-                .opacity(excepted ? 0.5 : 1)
-            }
+    @ViewBuilder
+    var tabContent: some View {
+        switch tab {
+        case .exceptions:
+            SettingsExceptionsView()
+        case .statusBar:
+            SettingsStatusBarView()
         }
     }
 }

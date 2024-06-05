@@ -14,6 +14,8 @@ final class SettingsStore: ObservableObject {
     @Published var httpHandlers: [Bundle] = []
     @AppStorage("httpHandlerExceptions") var httpHandlerExceptions: [String] = ["com.googlecode.iterm2"]
     @Published var currentHttpHandler: Bundle = SettingsStore.currentHttpHandlerBundle()
+    @AppStorage("statusBarHandlerIcon")var statusBarHandlerIcon: Bool = false
+    @AppStorage("statusBarHandlerIconMonochrome") var statusBarHandlerIconMonochrome: Bool = false
     
     var appVersion: String {
         "v.\(Bundle.main.marketingVersion ?? "") (\(Bundle.main.buildVersion ?? ""))"
