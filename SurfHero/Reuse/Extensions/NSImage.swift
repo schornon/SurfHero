@@ -29,4 +29,13 @@ extension NSImage {
         guard let imageData = self.tiffRepresentation else { return nil }
         return CIImage(data: imageData)
     }
+    
+    func tint(color: NSColor) -> NSImage {
+        NSImage(size: size, flipped: false) { rect in
+            color.set()
+            rect.fill()
+            self.draw(in: rect, from: NSRect(origin: .zero, size: self.size), operation: .destinationIn, fraction: 1.0)
+            return true
+        }
+    }
 }

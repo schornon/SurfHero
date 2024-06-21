@@ -9,6 +9,7 @@ import SwiftUI
 
 struct StatusBarIcon: View {
     @EnvironmentObject var settingsStore: SettingsStore
+    @Environment(\.colorScheme) var colorScheme
     
     var handlerIcon: NSImage? {
         guard settingsStore.statusBarHandlerIcon else { return nil }
@@ -21,15 +22,18 @@ struct StatusBarIcon: View {
         return icon
     }
     
-    let windowIcon: NSImage = {
+    var windowIcon: NSImage {
         //let img = NSImage(named: "sh-window-icon") ?? NSImage()
         let img = NSImage(systemSymbolName: "macwindow", accessibilityDescription: nil) ?? NSImage()
         let ratio = img.size.height / img.size.width
         img.size.height = 16
         img.size.width = 16 / ratio
-        print(img.isTemplate)
-        return img
-    }()
+        return img.tint(color: windowIconColor)
+    }
+    
+    var windowIconColor: NSColor {
+        colorScheme == .light ? .black : .white
+    }
     
     var combinedIcon: NSImage {
         let size = CGSize(width: 22, height: 16)
