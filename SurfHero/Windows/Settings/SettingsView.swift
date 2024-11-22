@@ -32,9 +32,7 @@ struct SettingsView: View {
             tabContent
         }
         .padding()
-        .overlay(alignment: .bottomTrailing) {
-            SettingsVersionView(text: store.appVersion)
-        }
+        .frame(width: 300)
     }
     
     var tabPicker: some View {
@@ -45,7 +43,6 @@ struct SettingsView: View {
             }
         }
         .pickerStyle(SegmentedPickerStyle())
-        .frame(maxWidth: 300)
     }
     
     @ViewBuilder
@@ -55,6 +52,8 @@ struct SettingsView: View {
             SettingsExceptionsView()
         case .statusBar:
             SettingsStatusBarView()
+        case .about:
+            SettingsAboutView()
         }
     }
 }
