@@ -20,6 +20,7 @@
 		C569119F2C10AC6E008591B7 /* StatusBarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C569119E2C10AC6E008591B7 /* StatusBarIcon.swift */; };
 		C585B5382C1095E500F0E182 /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C585B5372C1095E500F0E182 /* NSImage.swift */; };
 		C58DC4C72CF0711100F03574 /* SettingsAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58DC4C62CF0711100F03574 /* SettingsAboutView.swift */; };
+		C58DC4C92CF09B0500F03574 /* AboutTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58DC4C82CF09B0500F03574 /* AboutTabView.swift */; };
 		C5B8678B2BC0467700B29CD7 /* NSWorkspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B8678A2BC0467700B29CD7 /* NSWorkspace.swift */; };
 		C5B867912BC44E1700B29CD7 /* LiftButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B867902BC44E1700B29CD7 /* LiftButtonStyle.swift */; };
 		C5C2ED6B2BBF098700B93F0C /* SettingsVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C2ED6A2BBF098700B93F0C /* SettingsVersionView.swift */; };
@@ -41,6 +42,7 @@
 		C569119E2C10AC6E008591B7 /* StatusBarIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarIcon.swift; sourceTree = "<group>"; };
 		C585B5372C1095E500F0E182 /* NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage.swift; sourceTree = "<group>"; };
 		C58DC4C62CF0711100F03574 /* SettingsAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAboutView.swift; sourceTree = "<group>"; };
+		C58DC4C82CF09B0500F03574 /* AboutTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTabView.swift; sourceTree = "<group>"; };
 		C5B8678A2BC0467700B29CD7 /* NSWorkspace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSWorkspace.swift; sourceTree = "<group>"; };
 		C5B867902BC44E1700B29CD7 /* LiftButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftButtonStyle.swift; sourceTree = "<group>"; };
 		C5C2ED6A2BBF098700B93F0C /* SettingsVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVersionView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				C569119C2C10A999008591B7 /* SettingsStatusBarView.swift */,
 				C58DC4C62CF0711100F03574 /* SettingsAboutView.swift */,
 				C5C2ED6A2BBF098700B93F0C /* SettingsVersionView.swift */,
+				C58DC4C82CF09B0500F03574 /* AboutTabView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				C585B5382C1095E500F0E182 /* NSImage.swift in Sources */,
 				C569119F2C10AC6E008591B7 /* StatusBarIcon.swift in Sources */,
 				C5B8678B2BC0467700B29CD7 /* NSWorkspace.swift in Sources */,
+				C58DC4C92CF09B0500F03574 /* AboutTabView.swift in Sources */,
 				C58DC4C72CF0711100F03574 /* SettingsAboutView.swift in Sources */,
 				C569119B2C10A960008591B7 /* SettingsExceptionsView.swift in Sources */,
 				8C74FA3D29FFF8670056AA97 /* SettingsStore.swift in Sources */,
