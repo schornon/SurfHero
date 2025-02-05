@@ -26,7 +26,7 @@ struct SettingsAboutView: View {
                     .font(.system(size: 16, weight: .semibold, design: .rounded))
                     .opacity(0.4)
                 
-                Text("Copyright © 2024 Serhii Chornonoh")
+                Text("Copyright © 2025 Serhii Chornonoh")
                     .font(.system(size: 10, weight: .regular, design: .rounded))
                     .opacity(0.4)
             }
