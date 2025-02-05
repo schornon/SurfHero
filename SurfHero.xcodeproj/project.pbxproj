@@ -36,6 +36,7 @@
 		8C74FA3929FFD7A90056AA97 /* MenuBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarViewModel.swift; sourceTree = "<group>"; };
 		8C74FA3C29FFF8670056AA97 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		8C74FA3E29FFFF500056AA97 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C5587F642CF48D3D00E5BABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C56911982C109A72008591B7 /* SettingsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTab.swift; sourceTree = "<group>"; };
 		C569119A2C10A960008591B7 /* SettingsExceptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsExceptionsView.swift; sourceTree = "<group>"; };
 		C569119C2C10A999008591B7 /* SettingsStatusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStatusBarView.swift; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 		8C642B8429CA5D6D003999BB /* SurfHero */ = {
 			isa = PBXGroup;
 			children = (
+				C5587F642CF48D3D00E5BABA /* Info.plist */,
 				8C74FA3529FFD7250056AA97 /* Windows */,
 				8C642B8529CA5D6D003999BB /* SurfHeroApp.swift */,
 				C5B867882BC0465B00B29CD7 /* Reuse */,
@@ -387,6 +389,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SurfHero/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -416,6 +420,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SurfHero/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
