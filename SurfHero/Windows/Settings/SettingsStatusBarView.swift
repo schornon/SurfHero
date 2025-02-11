@@ -11,20 +11,27 @@ struct SettingsStatusBarView: View {
     @EnvironmentObject var store: SettingsStore
     
     var body: some View {
-        VStack {
-            Toggle("Browser icon", isOn: $store.statusBarHandlerIcon)
-                .toggleStyle(.checkbox)
+        VStack(alignment: .leading) {
+            AboutTabView(text: "Customize the appearance of the status bar icon")
             
-            Toggle("Monochrome", isOn: $store.statusBarHandlerIconMonochrome)
-                .toggleStyle(.checkbox)
-                .padding(.leading, 42)
-                .disabled(!store.statusBarHandlerIcon)
+            VStack(alignment: .leading) {
+                Toggle("Browser icon", isOn: $store.statusBarHandlerIcon)
+                    .toggleStyle(.checkbox)
+                
+                Toggle("Monochrome", isOn: $store.statusBarHandlerIconMonochrome)
+                    .toggleStyle(.checkbox)
+                    .padding(.leading, 20)
+                    .disabled(!store.statusBarHandlerIcon)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .frame(width: 300, alignment: .leading)
+        .padding(.horizontal)
     }
 }
 
 #Preview {
     SettingsStatusBarView()
         .environmentObject(SettingsStore.shared)
+        .padding()
+        .frame(width: 300)
 }

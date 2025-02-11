@@ -8,7 +8,7 @@
 import Foundation
 
 enum SettingsTab: String, CaseIterable, Identifiable {
-    case exceptions, statusBar
+    case exceptions, statusBar, about
     
     var id: String {
         rawValue
@@ -21,6 +21,8 @@ extension SettingsTab {
             "Exceptions"
         case .statusBar:
             "Status Bar"
+        case .about:
+            "About"
         }
     }
 }
