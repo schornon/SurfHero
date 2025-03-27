@@ -10,16 +10,20 @@ import SwiftUI
 struct SettingsAboutView: View {
     @EnvironmentObject var store: SettingsStore
     @Environment(\.openURL) var openURL
-    private let supportURL = URL(string: "https://forms.gle/Xm2RoiMLxWmeQhpP6")
+    private let supportURL = URL(string: "https://schornon.github.io/the-surf-hero/support.html")
     
     var body: some View {
         VStack {
-            Image(.surfHeroAppIcon)
-                .resizable()
-                .frame(width: 250, height: 250)
+            Color.clear
+                .frame(width: 250, height: 210)
+                .overlay {
+                    Image(.surfHeroAppIcon)
+                        .resizable()
+                        .frame(width: 250, height: 250)
+                }
             
-            VStack {
-                Text("Surf Hero")
+            VStack(spacing: 2) {
+                Text("The Surf Hero")
                     .font(.system(size: 24, weight: .bold, design: .rounded))
                 
                 Text(store.appVersion)
