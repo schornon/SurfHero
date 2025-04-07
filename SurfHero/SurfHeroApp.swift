@@ -33,6 +33,6 @@ struct SurfHeroApp: App {
 
 class Appdelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
-        NSApplication.shared.windows.first?.close()
+        
     }
 }
