@@ -28,6 +28,7 @@ struct SettingsView: View {
     var content: some View {
         VStack(spacing: 10) {
             tabPicker
+                .zIndex(100)
             
             tabContent
         }
