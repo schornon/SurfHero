@@ -11,7 +11,7 @@ struct SettingsView: View {
     
     @EnvironmentObject var store: SettingsStore
     
-    @State var tab: SettingsTab = .exceptions
+    @State var tab: SettingsTab = .about
     
     var body: some View {
         content
