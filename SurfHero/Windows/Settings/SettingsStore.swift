@@ -20,7 +20,7 @@ final class SettingsStore: ObservableObject {
     @AppStorage("isFirstLaunch") var isFirstLaunch: Bool = true
     
     var appVersion: String {
-        "v.\(Bundle.main.marketingVersion ?? "") (\(Bundle.main.buildVersion ?? ""))"
+        "v\(Bundle.main.marketingVersion ?? "") (\(Bundle.main.buildVersion ?? ""))"
     }
     
     private init() {
