@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ServiceManagement
 
 final class SettingsStore: ObservableObject {
     
@@ -16,13 +17,15 @@ final class SettingsStore: ObservableObject {
     @Published var currentHttpHandler: Bundle = SettingsStore.currentHttpHandlerBundle()
     @AppStorage("statusBarHandlerIcon")var statusBarHandlerIcon: Bool = false
     @AppStorage("statusBarHandlerIconMonochrome") var statusBarHandlerIconMonochrome: Bool = false
+    @AppStorage("isFirstLaunch") var isFirstLaunch: Bool = true
     
     var appVersion: String {
-        "v.\(Bundle.main.marketingVersion ?? "") (\(Bundle.main.buildVersion ?? ""))"
+        "v\(Bundle.main.marketingVersion ?? "") (\(Bundle.main.buildVersion ?? ""))"
     }
     
     private init() {
         synchronize()
+        addAppToLoginItemsIfNeeded()
     }
     
     private func synchronize() {
@@ -63,6 +66,21 @@ final class SettingsStore: ObservableObject {
             httpHandlerExceptions.removeAll(where: {$0 == bundleId})
         } else {
             httpHandlerExceptions.append(bundleId)
+        }
+    }
+    
+    private func addAppToLoginItemsIfNeeded() {
+        if isFirstLaunch {
+            addAppToLoginItems()
+            isFirstLaunch = false
+        }
+    }
+    
+    private func addAppToLoginItems() {
+        do {
+            try SMAppService.mainApp.register()
+        } catch {
+            print("addAppToLoginItems: error \(error.localizedDescription)")
         }
     }
 }

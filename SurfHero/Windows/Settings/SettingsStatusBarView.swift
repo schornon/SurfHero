@@ -13,6 +13,8 @@ struct SettingsStatusBarView: View {
     var body: some View {
         VStack(alignment: .leading) {
             AboutTabView(text: "Customize the appearance of the status bar icon")
+                .frame(width: 240)
+                .fixedSize()
             
             VStack(alignment: .leading) {
                 Toggle("Browser icon", isOn: $store.statusBarHandlerIcon)
@@ -23,9 +25,7 @@ struct SettingsStatusBarView: View {
                     .padding(.leading, 20)
                     .disabled(!store.statusBarHandlerIcon)
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .padding(.horizontal)
     }
 }
 

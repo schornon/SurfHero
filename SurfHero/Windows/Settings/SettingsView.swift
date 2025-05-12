@@ -11,7 +11,7 @@ struct SettingsView: View {
     
     @EnvironmentObject var store: SettingsStore
     
-    @State var tab: SettingsTab = .exceptions
+    @State var tab: SettingsTab = .about
     
     var body: some View {
         content
@@ -28,6 +28,7 @@ struct SettingsView: View {
     var content: some View {
         VStack(spacing: 10) {
             tabPicker
+                .zIndex(100)
             
             tabContent
         }
