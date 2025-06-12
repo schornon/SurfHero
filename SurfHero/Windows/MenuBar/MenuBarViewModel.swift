@@ -9,6 +9,7 @@ import SwiftUI
 import AppKit
 import Combine
 
+@MainActor
 final class MenuBarViewModel: ObservableObject {
     
     @Published var settings: SettingsStore = .shared

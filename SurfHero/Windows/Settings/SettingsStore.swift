@@ -8,6 +8,7 @@
 import SwiftUI
 import ServiceManagement
 
+@MainActor
 final class SettingsStore: ObservableObject {
     
     static let shared = SettingsStore()
@@ -49,10 +50,9 @@ final class SettingsStore: ObservableObject {
     }
     
     func setDefaultHttpHandler(_ bundle: Bundle) {
-        NSWorkspace.shared.setDefaultApplication(at: bundle.bundleURL, toOpenURLsWithScheme: "http") { [weak self] error in
-            DispatchQueue.main.async {
-                self?.currentHttpHandler = Self.currentHttpHandlerBundle()
-            }
+        Task {
+            try? await NSWorkspace.shared.setDefaultApplication(at: bundle.bundleURL, toOpenURLsWithScheme: "http")
+            currentHttpHandler = Self.currentHttpHandlerBundle()
         }
     }
     
