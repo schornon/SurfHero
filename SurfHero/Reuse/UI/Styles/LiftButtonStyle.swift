@@ -69,7 +69,7 @@ extension ButtonStyle where Self == LiftIconButtonStyle {
     Button("Safari") {}
         .buttonStyle(
             .liftIcon(
-                Image(nsImage: NSWorkspace.shared.getIcon(application: "Safari") ?? NSImage())
+                Image(nsImage: NSWorkspace.shared.getIcon(bundleID: "com.apple.safari") ?? NSImage())
             )
         )
         .padding()
