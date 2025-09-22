@@ -17,12 +17,13 @@ extension NSWorkspace {
 
     func getIcon(bundleID: String) -> NSImage? {
         guard
-            let path = absolutePathForApplication(withBundleIdentifier: bundleID)
+            let path = urlForApplication(withBundleIdentifier: bundleID)?.path(percentEncoded: false)
         else { return nil }
         
         return getIcon(file: path)
     }
 
+    /*
     func getIcon(application: String) -> NSImage? {
         guard
             let path = fullPath(forApplication: application)
@@ -30,6 +31,7 @@ extension NSWorkspace {
         
         return getIcon(file: path)
     }
+     */
     
     /// Easily read Info.plist as a Dictionary from any bundle by accessing .infoDictionary on Bundle
     func bundle(for bundleID: String) -> Bundle? {

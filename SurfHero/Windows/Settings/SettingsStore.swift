@@ -8,12 +8,20 @@
 import SwiftUI
 import ServiceManagement
 
+@MainActor
 final class SettingsStore: ObservableObject {
     
     static let shared = SettingsStore()
     var isOpened: Bool = false
     @Published var httpHandlers: [Bundle] = []
-    @AppStorage("httpHandlerExceptions") var httpHandlerExceptions: [String] = ["com.googlecode.iterm2"]
+
+    @AppStorage("httpHandlerExceptionsRaw")
+    var httpHandlerExceptionsRaw: CodableArray<String> = .init(elements: ["com.googlecode.iterm2"])
+    var httpHandlerExceptions: [String] {
+        get { httpHandlerExceptionsRaw.elements }
+        set { httpHandlerExceptionsRaw = CodableArray(elements: newValue) }
+    }
+    
     @Published var currentHttpHandler: Bundle = SettingsStore.currentHttpHandlerBundle()
     @AppStorage("statusBarHandlerIcon")var statusBarHandlerIcon: Bool = false
     @AppStorage("statusBarHandlerIconMonochrome") var statusBarHandlerIconMonochrome: Bool = false
@@ -24,6 +32,7 @@ final class SettingsStore: ObservableObject {
     }
     
     private init() {
+        migrationToCodableArray()
         synchronize()
         addAppToLoginItemsIfNeeded()
     }
@@ -49,10 +58,9 @@ final class SettingsStore: ObservableObject {
     }
     
     func setDefaultHttpHandler(_ bundle: Bundle) {
-        NSWorkspace.shared.setDefaultApplication(at: bundle.bundleURL, toOpenURLsWithScheme: "http") { [weak self] error in
-            DispatchQueue.main.async {
-                self?.currentHttpHandler = Self.currentHttpHandlerBundle()
-            }
+        Task {
+            try? await NSWorkspace.shared.setDefaultApplication(at: bundle.bundleURL, toOpenURLsWithScheme: "http")
+            currentHttpHandler = Self.currentHttpHandlerBundle()
         }
     }
     
@@ -85,24 +93,20 @@ final class SettingsStore: ObservableObject {
     }
 }
 
-
-extension Array: RawRepresentable where Element: Codable {
-    public init?(rawValue: String) {
-        guard let data = rawValue.data(using: .utf8),
-              let result = try? JSONDecoder().decode([Element].self, from: data)
-        else {
-            return nil
+/// Migrated on v1.6.0. Remove in nearest future.
+extension SettingsStore {
+    
+    private func migrationToCodableArray() {
+        let key = "didMigrationToCodableArray"
+        guard !UserDefaults.standard.bool(forKey: key) else { return }
+        
+        if let json = UserDefaults.standard.string(forKey: "httpHandlerExceptions"),
+           let data = json.data(using: .utf8),
+           let array = try? JSONDecoder().decode([String].self, from: data) {
+            httpHandlerExceptions = array
         }
-        self = result
-    }
-
-    public var rawValue: String {
-        guard let data = try? JSONEncoder().encode(self),
-              let result = String(data: data, encoding: .utf8)
-        else {
-            return "[]"
-        }
-        return result
+        
+        UserDefaults.standard.set(true, forKey: key)
     }
 }
 

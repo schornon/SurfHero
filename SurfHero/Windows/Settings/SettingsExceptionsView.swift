@@ -22,7 +22,7 @@ struct SettingsExceptionsView: View {
     
     struct DescriptionView: View {
         let included: Bool
-        let nsImage = NSWorkspace.shared.getIcon(application: "Safari") ?? NSImage()
+        let nsImage = NSWorkspace.shared.getIcon(bundleID: "com.apple.safari") ?? NSImage()
         var descr: String {
             included ? "included" : "excluded"
         }
